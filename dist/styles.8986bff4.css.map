@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,gBAAgB;AACpB;;AAEA;IACI,sBAAsB;IACtB,iDAAuD;AAC3D","file":"styles.8986bff4.css","sourceRoot":"..","sourcesContent":["body{\r\n    margin: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n@font-face {\r\n    font-family: CubicFont;\r\n    src: url(\"./assets/my_fonts/BoutiqueBitmap9x9_1.7.ttf\");\r\n}\r\n"]}

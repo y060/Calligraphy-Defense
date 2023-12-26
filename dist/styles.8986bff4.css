@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: CubicFont;
+    src: url("/BoutiqueBitmap9x9_1.7.beef1208.ttf");
+}
+
+
+/*# sourceMappingURL=/styles.8986bff4.css.map */
