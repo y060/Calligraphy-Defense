@@ -86,7 +86,7 @@ function initData() {
         "attacked2": ["你沒躲過友軍的範圍技", "友軍沒看後面揮到你了", "友軍表示抱歉"],
         "wrongAttack": ["友軍對您露出微笑^^", "你打到友軍了= ="]
     }
-    this.deadReason = this.add.text(this.gameWidth / 2, this.gameHeight / 2 - 10, "", { fontFamily: "CubicFont"})
+    this.deadReason = this.add.text(this.gameWidth / 2, this.gameHeight / 2 - 10, "", { fontFamily: "CubicFont", fontSize: "22px"})
     this.deadReason.setAlpha(0)
         .setDepth(2)
         .setOrigin(0.5, 0.5)
