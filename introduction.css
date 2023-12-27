@@ -16,11 +16,6 @@ body{
     --black: #212121;
 }
 
-@font-face {
-    font-family: CubicFont;
-    src: url("./assets/my_fonts/BoutiqueBitmap9x9_1.7.ttf");
-}
-
 a{
     color: black;
     text-decoration: none;

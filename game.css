@@ -4,6 +4,11 @@ body{
     font-family: "Noto Serif TC";
 }
 
+@font-face {
+    font-family: CubicFont;
+    src: url("./assets/my_fonts/BoutiqueBitmap9x9_1.7.ttf");
+}
+
 :root {
     --white100: #f7f8f9;
     --white300: #dcdfe4;
