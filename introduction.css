@@ -85,8 +85,9 @@ h3{
 @media (max-width: 768px) {
     #title h1{
         width: 100vw;
-        text-align: center;
+        top: 40vh;
         left: 0;
+        text-align: center;
         font-size: 4rem;
     }
 }
@@ -147,23 +148,46 @@ h3{
 }
 
 
-#font-table{
+#font-table-pc,
+#font-table-mb{
     width: 100%;
     margin-bottom: 1rem;
     border-collapse: separate;
 }
-#font-table *{
+#font-table-pc *, 
+#font-table-mb *{
     border: 2px solid var(--black);
 }
-#font-table th{
+#font-table-pc th, 
+#font-table-mb th{
     text-align: center;
 }
-#font-table th,
-#font-table td{
+#font-table-pc th,
+#font-table-pc td,
+#font-table-mb th,
+#font-table-mb td{
     padding: .2rem .7rem;
 }
 .none-font{
     opacity: .5;
+}
+#font-table-mb{
+    display: none;
+    visibility: hidden;
+}
+#font-table-pc{
+    display: table;
+    visibility: visible;
+}
+@media (max-width: 768px) {
+    #font-table-mb{
+        display: table;
+        visibility: visible;
+    }
+    #font-table-pc{
+        display: none;
+        visibility: hidden;
+    }
 }
 
 
