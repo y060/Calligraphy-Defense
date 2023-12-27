@@ -1,9 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap');
+
 body{
     margin: 0;
     overflow: hidden;
+    font-family: "Noto Serif TC";
+    background-image: url(./assets/webpage_bg/web_bg.PNG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:root {
+    --white100: #f7f8f9;
+    --white300: #dcdfe4;
+    --black: #212121;
 }
 
 @font-face {
     font-family: CubicFont;
     src: url("./assets/my_fonts/BoutiqueBitmap9x9_1.7.ttf");
 }
+
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+h2{
+    margin: 1rem 0 .2rem 0;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+h3{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.container{
+    margin-top: 1rem;
+    padding: 3rem 4rem;
+    background-color: rgba(247, 248, 249, .9);
+    color: var(--black)
+}
+
+
+#title{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    background-image: url(./assets/webpage_bg/web_bg.PNG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#title h1{
+    position: absolute;
+    top: 50vh;
+    left: 30vh;
+    color: var(--white100);
+    font-size: 5rem;
+}
+@keyframes game-anims {
+    from { transform: translateY(0); }
+    to { transform: translateY(10px); }
+}
+#title a{
+    position: absolute;
+    bottom: 10vh;
+    padding: .5rem 1rem;
+    border: none;
+    
+    color: var(--black);
+    background-color: var(--white300);
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    animation: game-anims 1s ease infinite alternate;
+}
+
+@media (max-width: 768px) {
+    #title h1{
+        width: 100vw;
+        text-align: center;
+        left: 0;
+        font-size: 4rem;
+    }
+}
+
+.how-to-play{
+    
+}
+
+#score{
+    margin-bottom: -2rem;
+}
+#score-line{
+    position: relative;
+    width: 90%;
+    height: .3rem;
+    margin: 2rem 0 4rem 0;
+    background-color: var(--black);
+    z-index: 0;
+}
+
+.score-intro::before{
+    content: "";
+    position: relative;
+    width: 1.3rem;
+    height: 1.3rem;
+    left: calc(50% - .65rem);
+    display: block;
+    border-radius: 50%;
+    background-color: var(--black);
+}
+.score-intro{
+    position: relative;
+    width: fit-content;
+    top: -4.8rem;
+    text-align: center;
+    z-index: 1;
+}
+.score-intro p{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+#main-ch{
+    height: 90% 
+}
+.dragon-img{
+    position: relative;
+    width: inherit;
+}
+.fire-img-p{
+    text-align: center;
+}
+.fire-img{
+    width: 75%;
+    max-width: 400px;
+}
+
+
+#font-table{
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: separate;
+}
+#font-table *{
+    border: 2px solid var(--black);
+}
+#font-table th{
+    text-align: center;
+}
+#font-table th,
+#font-table td{
+    padding: .2rem .7rem;
+}
+.none-font{
+    opacity: .5;
+}
+
+
+/* footer */
+footer{
+    width: 100%;
+    height: 10rem;
+    margin-top: 5rem;
+    color: var(--white100);  
+    background-color: var(--black);
+}
+footer a{
+    color: var(--white100);
+}
+footer a:hover{
+    color: var(--white300);
+}
+footer hr{
+    width: 100vw;
+    background-color: white;
+}
+

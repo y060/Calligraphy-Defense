@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>介紹 | </title>
+    <title>介紹 | 書法保衛戰 | 漢字藝術_期末專題</title>
+    <link rel="icon" href="./assets/main_character/thedragon.png" type="image/icon type">
+
+    <!--JQuery & bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+    <!-- Phaser -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    
+<body style="overflow: scroll;">
+
+    <div id="title" class="w-100 h-vh-100">
+        <h1>書法保衛戰</h1>
+        <a href="index.html">前往遊戲</a>
+    </div>
+
+    <div class="container text-center">
+
+        <div class="how-to-play">
+            <h2>玩法</h2>
+            <p class="mb-5">玩家要控制龍，每次遊戲開始，需保護的目標背景都會變更。<br>
+                龍要攻擊敵對字體，讓保護字體順利通過。</p>
+        </div>
+        
+        <div class="my-5">
+            <h2>分數機制</h2>
+            <div id="score" class="row justify-content-center">
+                <div id="score-line"></div>
+                <div class="score-intro col-3"><p>+50</p>龍攻擊到敵對字體</div>
+                <div class="score-intro col-3"><p>+20</p>保護字體安全通過</div>
+                <div class="score-intro col-3"><p>-10</p>敵對字體安全通過</div>
+            </div>
+        </div>
+
+        <div class="my-5">
+            <h2>角色</h2>
+            <div class="mt-3">
+                <h3>主角</h3>
+                <span>來源：自繪</span>
+                <div id="main-ch" class="w-100 mt-3 row justify-content-center">
+                    <p class="col-md-3 col-10 d-inline-block">
+                        <img class="dragon-img" src="./assets/main_character/thedragon.GIF" title="龍的動圖">
+                    </p>
+                    <p class="col-md-9 col-10 d-inline-block">
+                        <img class="dragon-img" src="./assets/main_character/dragon.png" title="龍的spritesheet">
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <h3>攻擊</h3>
+                <span><a href="https://www.spriters-resource.com/pc_computer/duckgame/sheet/116747/">來源</a></span>
+                <div class="col justify-content-center">
+                    <p class="fire-img-p"><img class="fire-img" src="./assets/main_character/fire.png"></p>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h3>字體</h3>
+                <table id="font-table" cellpadding="10">
+                    <tr>
+                        <th>篆書</th>
+                        <th>隸書</th>
+                        <th>楷書</th>
+                        <th class="none-font">行書</th>
+                    </tr>
+                    <tr>
+                        <td>嶧山刻石 - 李斯（據傳）</td>
+                        <td>曹全碑 - 佚名</td>
+                        <td>多寶塔碑 - 顏真卿</td>
+                        <td class="none-font">蘭亭序 - 王羲之</td>
+                    </tr>
+                </table>
+                <p>* 目前還在測試階段，僅<b>篆書</b>、<b>隸書</b>與<b>楷書</b>開放於遊戲內</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- <footer class="row justify-content-center align-items-center mx-0">
+        <div class="container mt-0 row justify-content-center">
+            <a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+                <span>@y060</span>
+            </a>
+            <a href="index.html">開始遊戲</a>
+        <hr class="m-0">
+        <div class="w-100 text-center">
+            <p>國立臺北科技大學 智慧自動化工程科</p>
+        </div>
+    </footer> -->
+
+
 </body>
 </html>

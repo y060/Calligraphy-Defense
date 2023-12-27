@@ -72,7 +72,7 @@ function initData() {
     this.randomFont = Math.floor(Math.random() * this.fontType.length)
     const type_n = this.fontType[this.randomFont][1]
     console.log(`保護字體：${Fonts[type_n].name}`)
-    this.fontTypeText = this.add.text(20, 20, `保護字體：${Fonts[type_n].name}`, { fontFamily: "CubicFont" })
+    this.fontTypeText = this.add.text(20, 20, `保護字體：${Fonts[type_n].name}`, { fontFamily: "CubicFont", fontSize: "20px" })
     this.fontTypeText.setDepth(2)
 
     // 分數設定
