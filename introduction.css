@@ -4,7 +4,7 @@ body{
     margin: 0;
     overflow: hidden;
     font-family: "Noto Serif TC";
-    background-image: url(./assets/webpage_bg/web_bg.PNG);
+    background-image: url(./assets/webpage/web_bg.PNG);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ h3{
     display: flex;
     justify-content: center;
 
-    background-image: url(./assets/webpage_bg/web_bg.PNG);
+    background-image: url(./assets/webpage/web_bg.PNG);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -188,6 +188,10 @@ h3{
         display: none;
         visibility: hidden;
     }
+}
+
+#modules{
+    margin: 5rem 0;
 }
 
 
