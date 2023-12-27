@@ -12,6 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <!-- Phaser -->
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
 
@@ -20,6 +23,10 @@
 </head>
 <body style="overflow: scroll;">
 
+    <script>
+        AOS.init();
+    </script>
+
     <div id="title" class="w-100 h-vh-100">
         <h1>書法保衛戰</h1>
         <a href="index.html">前往遊戲</a>
@@ -27,13 +34,13 @@
 
     <div class="container text-center">
 
-        <div class="how-to-play">
+        <div class="how-to-play" data-aos="fade-up" data-aos-duration="1000">
             <h2>玩法</h2>
             <p class="mb-5">玩家要控制龍，每次遊戲開始，需保護的目標背景都會變更。<br>
                 龍要攻擊敵對字體，讓保護字體順利通過。</p>
         </div>
         
-        <div class="my-5">
+        <div class="my-5" data-aos="fade-up" data-aos-duration="1000">
             <h2>分數機制</h2>
             <div id="score" class="row justify-content-center">
                 <div id="score-line"></div>
@@ -43,9 +50,9 @@
             </div>
         </div>
 
-        <div class="my-5">
+        <div class="my-5" data-aos="fade-up" data-aos-duration="1000">
             <h2>角色</h2>
-            <div class="mt-3">
+            <div class="mt-3" data-aos="zoom-out">
                 <h3>主角</h3>
                 <span>來源：自繪</span>
                 <div id="main-ch" class="w-100 mt-3 row justify-content-center">
@@ -58,7 +65,7 @@
                 </div>
             </div>
 
-            <div class="mt-3">
+            <div class="mt-3" data-aos="zoom-out">
                 <h3>攻擊</h3>
                 <span><a href="https://www.spriters-resource.com/pc_computer/duckgame/sheet/116747/">來源</a></span>
                 <div class="col justify-content-center">
@@ -66,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="mt-5">
+            <div class="mt-5" data-aos="zoom-out">
                 <h3>字體</h3>
                 <table id="font-table" cellpadding="10">
                     <tr>
